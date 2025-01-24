@@ -13,8 +13,12 @@
 #include "esphome/core/log.h"
 #include "esphome/components/binary_sensor/binary_sensor.h"
 #include "esphome/components/wifi/wifi_component.h"
-#ifdef USE_ESP32
+#ifdef USE_ARDUINO
 #include <WiFi.h>
+#endif
+
+#ifdef USE_ESP_IDF
+#include <esp_wifi.h>
 #endif
 
 #ifdef USE_ESP8266
